@@ -14,14 +14,12 @@ description: |
     libtasn1.so: is a library for Abstract Syntax Notation One (ASN.1) and Distinguish Encoding Rules (DER) manipulation
 
 
-in:
+var:
   version: "4.18.0"
 
 
 provision:
-  - url:
-      from: https://ftp.gnu.org/gnu/libtasn1/libtasn1-{% version %}.tar.gz
-      todir: "{% xbeeSrc %}"
+  url: https://ftp.gnu.org/gnu/libtasn1/libtasn1-{{ .version }}.tar.gz
 
 
 build:
@@ -29,5 +27,5 @@ build:
       cmds:
         - ./configure --prefix=/usr --disable-static
         - make
-        - make install DESTDIR="{% xbeeOut %}"
-      directory: "{% xbeeSrc %}/libtasn1-{% version %}"
+        - make install DESTDIR="{{ .xbee.out }}"
+      directory: "{{ .xbee.src }}/libtasn1-{{ .version }}"
