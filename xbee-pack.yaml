@@ -15,7 +15,8 @@ description: |
 
 
 var:
-  version: "4.18.0"
+  xbee:
+    version: "4.18.0"
 
 
 provision:
