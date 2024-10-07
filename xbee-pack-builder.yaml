@@ -1,7 +1,5 @@
 schema-version: 1.0
 
-type: builder
-
 description: |
   libtasn1 is a highly portable C library that encodes and decodes DER/BER data following an ASN.1 schema.
   Installed Programs: asn1Coding, asn1Decoding and asn1Parser
